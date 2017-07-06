@@ -1,5 +1,5 @@
 # copytogoodplayer
-This is shell script for multiply copying video files to Good Player via HTTP 
+This is shell script for multiple copying video files to Good Player via HTTP 
 
 ## Parameters
 s - IP address of your device
