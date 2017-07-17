@@ -11,6 +11,7 @@ IFS=';' read -ra FILES <<< "$NAMES"
 
 for i in "${FILES[@]}"; do
     i=$(echo $i | sed 's/[\]//g')
+    i=$(echo $i | sed 's/[ ]/_/g')
     mv -vf "$i" "$(dirname "$i")/$(basename "$i" | sed 's/[ ]/_/g')";
     echo Copying $i to $SERVER...
     response=$(curl --form upload=@./$i --form press=Submit http://$SERVER)
